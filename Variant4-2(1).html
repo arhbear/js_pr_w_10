@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#in").keypress(function(){
+                    var rand = Math.round((Math.random() * 255.0));
+                    var rand1 = Math.round((Math.random() * 255.0));
+                    var rand2 = Math.round((Math.random() * 255.0));
+                    $(this).css("background","rgb("+rand+","+rand1+","+rand2+")");
+                    document.getElementById('in').bgColor ="darkblue";
+                    document.getElementById('p1').innerHTML = color;
+                })
+
+            });
+        </script>
+    </head>
+    <body>
+        <input id="in"type="text">
+        <p id="p1"></p>
+    </body>
+</html>
